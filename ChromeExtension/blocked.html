@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blocked by Locked</title>
+  <link rel="icon" href="icons/icon48.png">
+  <link rel="stylesheet" href="blocked.css">
+  <script type="module" src="blocked.js"></script>
+</head>
+<body>
+  <main class="card">
+    <img class="lock" src="icons/icon128.png" alt="" width="64" height="64">
+    <h1 id="title">Blocked by Locked</h1>
+    <p class="url" id="blocked-url"></p>
+
+    <section id="session" hidden>
+      <p class="label">Session ends in</p>
+      <p class="countdown" id="remaining">–</p>
+      <p class="ends" id="ends-at"></p>
+    </section>
+
+    <section id="over" hidden>
+      <p>No focus session is running right now.</p>
+      <p><a id="continue" href="#">Continue to the page</a></p>
+    </section>
+
+    <section id="allowed-section" hidden>
+      <h2>Allowed during this session</h2>
+      <ul id="allowed" class="allowed"></ul>
+    </section>
+
+    <p class="hint" id="hint">Stay with it. You chose this.</p>
+  </main>
+</body>
+</html>

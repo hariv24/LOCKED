@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Locked",
+  "version": "0.1.0",
+  "description": "Blocks everything except your allowlist during a Locked focus session.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqpb2W164UZh16hx8RkTEWTTRxpRhLNahlHwZawBrUmqi26H/R6YI8SSv7O3jSt5pc+6r0w0RPbecQVhhteM3Ljzyv24GUDGlkbBN4oRlVm3P6WS8xqbnNR2SNu67+5LBQDwCavrEqGvfL6qfW7yXXyBex78KZcd6uHpUYNKdYmtCf/N9Qw+YzUoNTke5mPQ5ukrVLHc3UvQQNp9rcUU8b7IUM1ZFzfsegvFVQdjmD6M3ieRYSzuBesaF/nOLaVp1zeWLYZLSuiINsx7mr0XH5ogrMkaMionAstXv90+P6tgNIf8iZo4SxQiU0U4n1u74/y1SgPNNd1ljCRM49Hy2CQIDAQAB",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "nativeMessaging",
+    "webNavigation",
+    "tabs",
+    "storage",
+    "declarativeNetRequest",
+    "alarms"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "incognito": "spanning",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Locked",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["youtube.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

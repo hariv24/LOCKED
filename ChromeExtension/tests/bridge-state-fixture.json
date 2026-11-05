@@ -1,0 +1,34 @@
+{
+  "_comment": "Exact bytes LockedBridge sends (Tests/LockedBridgeTests/WireFixtureTests.swift pins them; tests/wire-contract.test.mjs parses them). Website URLs are in the shape the app's SetupModel.normalizeWebsite stores.",
+  "wire": "{\"active\":true,\"endsAt\":\"2026-11-05T13:00:00Z\",\"type\":\"state\",\"websites\":[{\"scope\":\"domain\",\"url\":\"https://claude.ai\"},{\"scope\":\"domain\",\"url\":\"http://localhost\"},{\"scope\":\"domain\",\"url\":\"https://www.example.org\"},{\"scope\":\"page\",\"url\":\"https://developer.apple.com/documentation/swiftui\"},{\"scope\":\"page\",\"url\":\"https://Docs.Python.org/3/library/\"},{\"scope\":\"page\",\"url\":\"https://en.wikipedia.org/wiki/Deep_work?useskin=vector#History\"}],\"youtubeVideoIds\":[\"dQw4w9WgXcQ\",\"a-b_c-d_e-f\"]}",
+  "inactiveWire": "{\"active\":false,\"type\":\"state\"}",
+  "activeAt": "2026-11-05T12:30:00Z",
+  "expiredAt": "2026-11-05T13:00:00Z",
+  "allowed": [
+    "https://claude.ai/new",
+    "https://www.claude.ai/",
+    "https://api.claude.ai/x",
+    "http://localhost:3000/dev",
+    "https://example.org/",
+    "https://sub.example.org/a",
+    "https://developer.apple.com/documentation/swiftui",
+    "https://developer.apple.com/documentation/swiftui/view?lang=x",
+    "https://docs.python.org/3/library/os.html",
+    "https://docs.python.org/3/library",
+    "https://en.wikipedia.org/wiki/Deep_work",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://youtu.be/a-b_c-d_e-f",
+    "https://accounts.google.com/signin"
+  ],
+  "blocked": [
+    "https://claude.ai.evil.com/",
+    "https://example.com/",
+    "https://developer.apple.com/documentation/uikit",
+    "https://developer.apple.com/documentation/swiftuix",
+    "https://docs.python.org/3/tutorial/",
+    "https://en.wikipedia.org/wiki/Procrastination",
+    "https://www.youtube.com/watch?v=aaaaaaaaaaa",
+    "https://www.youtube.com/",
+    "chrome://extensions/"
+  ]
+}

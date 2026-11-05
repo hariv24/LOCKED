@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Locked</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <header>
+    <img src="icons/icon48.png" alt="" width="24" height="24">
+    <h1>Locked</h1>
+    <span class="pill" id="conn">…</span>
+  </header>
+
+  <section id="active" hidden>
+    <p class="label">Session ends in</p>
+    <p class="countdown" id="remaining">–</p>
+    <h2>Allowed</h2>
+    <ul id="allowed" class="allowed"></ul>
+    <p class="empty" id="none" hidden>Nothing on the web is allowed in this session.</p>
+  </section>
+
+  <section id="idle" hidden>
+    <p id="idle-text">No focus session is running.</p>
+  </section>
+</body>
+</html>
